@@ -10,6 +10,14 @@
     <input type="radio" name="question2" id="q2-2"  value="B"/><label for='q2-2'>Albus <br />
     <input type="radio" name="question2" id="q2-3"  Value="C"/><label for='q2-3'>Monte Rey <br />
     <div id="question2-feedback" class="answer"></div><br />
+    
+    What year did the Beatles break up? 
+    <input type="text" name="question3" size="5" /><br />
+    <div id="question3-feedback" class="answer"></div><br />
+    
+    When did Columbus sail the ocean blue?
+    <input type="text" name="question4" size="5" /><br />
+    <div id="question4-feedback" class="answer"></div><br />
 
     <input type="submit" value="Submit" />
     

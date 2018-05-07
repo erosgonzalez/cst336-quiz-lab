@@ -5,15 +5,25 @@ $(document).ready(function(){
         }
     );
     
+    $("#goback").click( function() {
+        window.location.href="login.php";
+        }
+    );
+    
     var score = 0;
     $("form").submit(function(event) {
         event.preventDefault();
     
         var answer1 = $("input[name='question1']").val().trim();
         var answer2 = $("input[name='question2']:checked").val();
+        var answer3 = $("input[name='question3']").val().trim();
+        var answer4 = $("input[name='question4']").val().trim();
         
         console.log(answer1);
         console.log(answer2);
+        console.log(answer3);
+        console.log(answer4);
+        
         
         if (answer1 === "1994") {
             correctAnswer($("#question1-feedback")); 
@@ -32,6 +42,22 @@ $(document).ready(function(){
         }
         
         $("#question2-feedback").append("The answer is <strong>Monte Rey</strong>"); 
+        
+        if (answer3 === "1970") {
+            correctAnswer($("#question3-feedback")); 
+        } else {
+            incorrectAnswer($("#question3-feedback"));
+        }
+        
+        $("#question3-feedback").append("The answer is <strong>1970</strong>"); 
+        
+        if (answer4 === "1492") {
+            correctAnswer($("#question4-feedback")); 
+        } else {
+            incorrectAnswer($("#question4-feedback"));
+        }
+        
+        $("#question4-feedback").append("The answer is <strong>1492</strong>"); 
 
         $('#score').html(score); 
         $("#waiting").html("<img src='img/loading.gif' alt='submitting data' />"); 
