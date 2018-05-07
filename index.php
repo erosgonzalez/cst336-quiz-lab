@@ -8,6 +8,11 @@ function displayQuiz(){
         header("Location: login.php");
     }
 }
+function destroy(){
+    unset($_SESSION['username']);
+    $message = "destroy";
+    echo "<script type='text/javascript'>alert('$message');</script>";
+}
 ?>
 
 <!DOCTYPE html>

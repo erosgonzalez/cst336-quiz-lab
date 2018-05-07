@@ -1,7 +1,9 @@
 <?php 
  echo "<div align = 'center'><iframe width='1000' height='500' src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1' frameborder='0' encrypted-media' allowfullscreen></iframe></div>";
 
-    //session_destroy();
+    session_start(); 
+    session_destroy(); 
+    
 ?>
 <!DOCTYPE html>
 <html>
